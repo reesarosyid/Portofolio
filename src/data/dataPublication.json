@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "678bc453630b375a8879f0de"
+  },
+  "img_path": [
+    "Img/Publication/Profile.png",
+    "Img/Publication/Lubna.png",
+    "Img/Publication/Akbar.png",
+    "Img/Publication/Akrom.png",
+    "Img/Publication/Supriadi.png",
+    "Img/Publication/Hermawan.png"
+  ],
+  "title": "Implementation of quantum machine learning in predicting corrosion inhibition efficiency of expired drugs.",
+  "date": "Jul 16, 2024",
+  "journal": "Materials Today Communications, Elsevier",
+  "doi": "https://doi.org/10.1016/j.mtcomm.2024.109830",
+  "abstract": "This study explores the potential of quantum machine learning (QML) 's potential in predicting expired pharmaceutical compounds' corrosion inhibition capacity. This investigation utilized a QSPR model where features derived from density functional theory (DFT) calculations are used as input, while the corrosion inhibition efficiency (CIE) values derived from the experimental study are used as target output. The proposed QML model exhibits varying performance through evaluation metrics, particularly concerning encoding and ansatz design. Notably, the quantum support vector machine (QSVM) demonstrates superior predictive performance compared to the variational quantum circuit (VQC) and quantum neural network (QNN). Specifically, the QSVM model achieves the highest scores in evaluation metrics, with a root mean squared error (RMSE) of 4.36, mean absolute error (MAE) of 3.19, and mean absolute deviation (MAD) of 3.08. The research highlights the importance of larger datasets to improve predictability and emphasizes the potential of QML in investigating anti-corrosion materials. Despite its limitations, this study establishes a foundational framework for utilizing QML to forecast anti-corrosive qualities."
+},
+{
+  "_id": {
+    "$oid": "678bc453630b375a8879f0df"
+  },
+  "img_path": [
+    "Img/Publication/Profile.png",
+    "Img/Publication/Lubna.png",
+    "Img/Publication/Akrom.png"
+  ],
+  "title": "Investigasi Model Machine Learning Regresi Pada Senyawa Obat Sebagai Inhibitor Korosi.",
+  "date": "Jul 29, 2024",
+  "journal": "Jurnal Algoritma, Institut Teknologi Garut",
+  "doi": "https://doi.org/10.33364/algoritma/v.21-1.1598",
+  "abstract": "Korosi merupakan tantangan signifikan bagi daya tahan material, yang seringkali menyebabkan kerugian ekonomi yang besar. Penelitian ini memanfaatkan teknik Machine Learning (ML)untuk memprediksi efektivitas senyawa obat sebagai inhibitor korosi. Kami menggunakan lima algoritma MLyang unggul: Regresi Linear, Support Vector Machines (SVM), K-Nearest Neighbors (KNN), Random Forest, dan XGBoost. Model-model ini dilatih dan dievaluasi menggunakan dataset yang terdiri dari 14 fitur molekuler dengan efisiensi inhibisi korosi (IE%) sebagai variabel target. Hasil pelatihan model awal mengidentifikasi Random Forest dan XGBoost sebagai model yang berkinerja terbaik berdasarkan metrik Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), dan R-squared (R²). Penyetelan hiperparameter lebih lanjut menggunakan GridSearchCV menunjukkan bahwa XGBoost, setelah penyetelan, secara signifikan mengungguli model lainnya, mencapai kesalahan terendah dan nilai R² tertinggi, menunjukkan akurasi prediktif yang superior untuk kasusini. Temuan ini menegaskan potensi ML, khususnya XGBoost, dalam meningkatkan pemodelan prediktif inhibitor korosi, sehingga memberikan wawasan berharga bagi bidang ilmu korosi."
+}]
