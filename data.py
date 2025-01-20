@@ -148,3 +148,65 @@ db.Publications.insert_many([
     "abstract": "Korosi merupakan tantangan signifikan bagi daya tahan material, yang seringkali menyebabkan kerugian ekonomi yang besar. Penelitian ini memanfaatkan teknik Machine Learning (ML)untuk memprediksi efektivitas senyawa obat sebagai inhibitor korosi. Kami menggunakan lima algoritma MLyang unggul: Regresi Linear, Support Vector Machines (SVM), K-Nearest Neighbors (KNN), Random Forest, dan XGBoost. Model-model ini dilatih dan dievaluasi menggunakan dataset yang terdiri dari 14 fitur molekuler dengan efisiensi inhibisi korosi (IE%) sebagai variabel target. Hasil pelatihan model awal mengidentifikasi Random Forest dan XGBoost sebagai model yang berkinerja terbaik berdasarkan metrik Mean Squared Error (MSE), Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), dan R-squared (R²). Penyetelan hiperparameter lebih lanjut menggunakan GridSearchCV menunjukkan bahwa XGBoost, setelah penyetelan, secara signifikan mengungguli model lainnya, mencapai kesalahan terendah dan nilai R² tertinggi, menunjukkan akurasi prediktif yang superior untuk kasusini. Temuan ini menegaskan potensi ML, khususnya XGBoost, dalam meningkatkan pemodelan prediktif inhibitor korosi, sehingga memberikan wawasan berharga bagi bidang ilmu korosi."
   }
 ])
+db.Certificate.insert_many([
+  {
+    "img_path": "Img/CertificateNSkill/ibm.svg",
+    "company": "IBM",
+    "title": "Data Engineering Specialization",
+    "issued": "Dec 2024",
+    "credentialId": "4UOBSZFVI5KO",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/4UOBSZFVI5KO"
+  },
+  {
+    "img_path": "Img/CertificateNSkill/deeplearningai.png",
+    "company": "DeepLearning.AI",
+    "title": "Natural Language Processing Specialization",
+    "issued": "Jul 2023",
+    "credentialId": "WAV9HUUP4DM2",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/WAV9HUUP4DM2"
+  },
+  {
+    "img_path": "Img/CertificateNSkill/deeplearningai.png",
+    "company": "DeepLearning.AI",
+    "title": "TensorFlow: Advanced Techniques Specialization",
+    "issued": "Jun 2023",
+    "credentialId": "44GPS8X5AHGH",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/44GPS8X5AHGH"
+  },
+  {
+    "img_path": "Img/CertificateNSkill/deeplearningai.png",
+    "company": "DeepLearning.AI",
+    "title": "TensorFlow: Data and Deployment Specialization",
+    "issued": "May 2023",
+    "credentialId": "PZMXCYVUHF5A",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/PZMXCYVUHF5A"
+  },{
+    "img_path": "Img/CertificateNSkill/deeplearningai.png",
+    "company": "DeepLearning.AI",
+    "title": "TensorFlow Developer Specialization",
+    "issued": "Apr 2023",
+    "credentialId": "W68Z3TXPWYLW",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/W68Z3TXPWYLW"
+  },{
+    "img_path": "Img/CertificateNSkill/stanford.svg",
+    "company": "Stanford University",
+    "title": "Machine Learning Specialization",
+    "issued": "Apr 2023",
+    "credentialId": "77ZBJZZB4EDF",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/77ZBJZZB4EDF"
+  },{
+    "img_path": "Img/CertificateNSkill/google.svg",
+    "company": "Google",
+    "title": "IT Automation with Python Specialization",
+    "issued": "Mar 2023",
+    "credentialId": "44GPS8X5AHGH",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/44GPS8X5AHGH"
+  },{
+    "img_path": "Img/CertificateNSkill/icl.svg",
+    "company": "Imperial College London",
+    "title": "Mathematics for Machine Learning Specialization",
+    "issued": "Mar 2023",
+    "credentialId": "5KQ9NEBZ3VLJ",
+    "link": "https://www.coursera.org/account/accomplishments/specialization/5KQ9NEBZ3VLJ"
+  }
+])

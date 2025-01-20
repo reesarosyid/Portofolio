@@ -74,6 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
 const containerEdu = document.getElementById('education-container');
 const containerExp = document.getElementById('experience-container');
 const containerPub = document.getElementById('publication-container');
+const containerCer = document.getElementById('certificate-container');
+const containerCerVa = document.getElementById('certificate-container-va');
 
 // Function to create and render an education item
 function renderEducationItem(container, item) {
@@ -94,7 +96,7 @@ function renderEducationItem(container, item) {
                 <p class="text-sm text-white">${item.start_date} - ${item.end_date}</p>
                 <h3 class="text-xl font-semibold text-black">${item.school}</h3>
                 <p class="text-gray-800">${item.field}</p>
-                <p class="mt-2 text-white">GPA: ${item.grade}</p>
+                <p class="mt-2 text-white">Grade: ${item.grade}</p>
                 <p class="mt-2 text-white">Thesis: ${item.thesis}</p>
             </div>
         </div>
@@ -207,6 +209,100 @@ function renderPublicationItem(container, item) {
     container.appendChild(publicationItem);
   }
 
+function renderCertificateItem(container, containerVa, item, index, totalItems) {
+    // Create certificate item for main container (only if index < 3)
+    if (index < 3) {
+      const certificateItem = document.createElement('li');
+      certificateItem.innerHTML = `
+        <div class="flex items-center justify-between w-full text-gray-900">
+        <div class="flex items-center space-x-4">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <img src="${item.img_path}" alt="${item.company} Logo" class="w-12 h-12 rounded-full object-contain">
+          </div>
+          <!-- Details -->
+          <div class="flex flex-col">
+            <h3 class="text-lg font-semibold text-gray-800">${item.title}</h3>
+            <p class="text-sm font-semibold text-gray-700 mt-2">${item.company}</p>
+            <p class="text-sm text-gray-700 mt-2">Issued: ${item.issued}</p>
+            <p class="text-sm text-gray-700 mt-2"">Credential ID: ${item.credentialId}</p>
+          </div>
+        </div>
+        <!-- Button -->
+        <div class="flex items-center">
+          <a 
+            href="${item.link}" 
+            target="_blank"
+            class="inline-flex items-center px-4 py-2 text-sm font-semibold text-black bg-yellow-400 border rounded-lg hover:bg-yellow-700 w-32"
+          >
+            Show credential
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4 ml-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      `;
+      container.appendChild(certificateItem);
+    }
+    
+    // Create certificate item for modal view (all items)
+    const certificateItemVa = document.createElement('li');
+    certificateItemVa.innerHTML = `
+        <div class="flex items-center justify-between w-full text-gray-900">
+        <div class="flex items-center space-x-4">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <img src="${item.img_path}" alt="${item.company} Logo" class="w-12 h-12 rounded-full object-contain">
+          </div>
+          <!-- Details -->
+          <div class="flex flex-col">
+            <h3 class="text-lg font-semibold text-gray-800">${item.title}</h3>
+            <p class="text-sm font-semibold text-gray-700 mt-2">${item.company}</p>
+            <p class="text-sm text-gray-700 mt-2">Issued: ${item.issued}</p>
+            <p class="text-sm text-gray-700 mt-2"">Credential ID: ${item.credentialId}</p>
+          </div>
+        </div>
+        <!-- Button -->
+        <div class="flex items-center">
+          <a 
+            href="${item.link}" 
+            target="_blank"
+            class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-black bg-yellow-400 border rounded-lg hover:bg-yellow-700"
+          >
+            Show credential
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4 ml-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      `;
+    containerVa.appendChild(certificateItemVa);
+}
+
 // Fetch JSON data
 fetch('data/dataEducation.json')
     .then(response => {
@@ -250,6 +346,21 @@ fetch('data/dataPublication.json')
             renderPublicationItem(containerPub, item);  // Ini yang benar
         });
     })
+    .catch(error => console.error('Error loading data:', error));
+
+    fetch('data/dataCertificate.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      data.forEach((item, index) => {
+        renderCertificateItem(containerCer, containerCerVa, item, index, data.length);
+      });
+    })
+    .catch(error => console.error('Error loading data:', error));
 
 
 

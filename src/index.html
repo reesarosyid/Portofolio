@@ -202,57 +202,11 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
             <!-- Certificates Section (Left Column) -->
-            <div class="bg-white p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out">
+            <div class="bg-gray-200 p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl hover:bg-gray-400 hover:border-gray-400 hover:scale-105 transition-all duration-300 ease-in-out">
                 <h5 class="text-2xl font-semibold text-gray-900 mb-6">Certificates</h5>
-                <ul role="list" class="space-y-6">
-                    <li class="flex items-center space-x-4 text-gray-900">
-                        <!-- Logo -->
-                        <div class="flex-shrink-0">
-                            <img src="./Img/Icon/ibm.svg" alt="IBM Logo" class="w-12 h-12 rounded-full object-contain">
-                        </div>
-                        <!-- Details -->
-                        <div class="flex flex-col">
-                            <span class="font-medium text-lg">IBM Data Engineering specialization</span>
-                            <span class="text-sm text-gray-600">IBM</span>
-                            <span class="text-sm text-gray-600">Issued: Dec 24</span>
-                            <span class="text-sm text-gray-600">Credential ID: 4UOBSZFVI5KO</span>
-                            <!-- Button -->
-                            <a href="https://www.coursera.org/account/accomplishments/specialization/4UOBSZFVI5KO" target="_blank" 
-                                class="inline-flex items-center justify-center mt-3 px-4 py-2 text-sm font-medium text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50">
-                                Show credential
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                </svg>
-                            </a>
-                        </div>
-                        
-                    </li>
-                    <li class="flex items-center space-x-4 text-gray-900">
-                        <!-- Logo -->
-                        <div class="flex-shrink-0">
-                            <img src="./Img/Icon/stanford.svg" alt="IBM Logo" class="w-12 h-12 rounded-full object-contain">
-                        </div>
-                        <!-- Details -->
-                        <div class="flex flex-col">
-                            <span class="font-medium text-lg">Machine Learning specialization</span>
-                            <span class="text-sm text-gray-600">Stanford University</span>
-                            <span class="text-sm text-gray-600">Issued: Apr 23</span>
-                            <span class="text-sm text-gray-600">Credential ID: 77ZBJZZB4EDF</span>
-                            <!-- Button -->
-                            <a href="https://www.coursera.org/account/accomplishments/specialization/77ZBJZZB4EDF" target="_blank" 
-                                class="inline-flex items-center justify-center mt-3 px-4 py-2 text-sm font-medium text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50">
-                                Show credential
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                </svg>
-                            </a>
-                        </div>
-                        
-                    </li>
-                    
-                </ul>
+                <ul role="list" class="space-y-6" id="certificate-container"></ul>
                 <div class="mt-4 text-center">
-                    <a href="javascript:void(0)" onclick="openModal('certificates-modal')" class="text-blue-600 hover:underline">View All Certificates &rarr;</a>
+                    <a href="javascript:void(0)" onclick="openModal('certificates-modal')" class="text-yellow-600 hover:text-yellow-700 hover:underline">View All Certificates &rarr;</a>
                 </div>
             </div>
 
@@ -278,56 +232,10 @@
         </div>
         <!-- View All Certificates Modal -->
         <div id="certificates-modal" class="hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
-            <div class="bg-white w-3/4 max-h-[80vh] overflow-y-scroll p-6 rounded-lg shadow-xl">
+            <div class="bg-gray-200 w-3/4 max-h-[80vh] overflow-y-scroll p-6 rounded-lg shadow-xl">
                 <h3 class="text-3xl font-semibold text-gray-900 mb-6">All Certificates</h3>
                 <!-- Add a list of all certificates here -->
-                <ul role="list" class="space-y-6 items-center">
-                    <li class="flex items-center space-x-4 text-gray-900">
-                        <!-- Logo -->
-                        <div class="flex-shrink-0">
-                            <img src="./Img/Icon/ibm.svg" alt="IBM Logo" class="w-12 h-12 rounded-full object-contain">
-                        </div>
-                        <!-- Details -->
-                        <div class="flex flex-col">
-                            <span class="font-medium text-lg">IBM Data Engineering specialization</span>
-                            <span class="text-sm text-gray-600">IBM</span>
-                            <span class="text-sm text-gray-600">Issued: Dec 24</span>
-                            <span class="text-sm text-gray-600">Credential ID: 4UOBSZFVI5KO</span>
-                            <!-- Button -->
-                            <a href="https://www.coursera.org/account/accomplishments/specialization/4UOBSZFVI5KO" target="_blank" 
-                                class="inline-flex items-center justify-center mt-3 px-4 py-2 text-sm font-medium text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50">
-                                Show credential
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                </svg>
-                            </a>
-                        </div>
-                        
-                    </li>
-                    <li class="flex items-center space-x-4 text-gray-900">
-                        <!-- Logo -->
-                        <div class="flex-shrink-0">
-                            <img src="./Img/Icon/stanford.svg" alt="IBM Logo" class="w-12 h-12 rounded-full object-contain">
-                        </div>
-                        <!-- Details -->
-                        <div class="flex flex-col">
-                            <span class="font-medium text-lg">Machine Learning specialization</span>
-                            <span class="text-sm text-gray-600">Stanford University</span>
-                            <span class="text-sm text-gray-600">Issued: Apr 23</span>
-                            <span class="text-sm text-gray-600">Credential ID: 77ZBJZZB4EDF</span>
-                            <!-- Button -->
-                            <a href="https://www.coursera.org/account/accomplishments/specialization/77ZBJZZB4EDF" target="_blank" 
-                                class="inline-flex items-center justify-center mt-3 px-4 py-2 text-sm font-medium text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50">
-                                Show credential
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                </svg>
-                            </a>
-                        </div>
-                        
-                    </li>
-                    <!-- Additional certificates here -->
-                </ul>
+                <ul role="list" class="space-y-6 items-center" id="certificate-container-va"></ul>
                 <div class="mt-6 text-center">
                     <button onclick="closeModal('certificates-modal')" class="bg-red-600 text-white py-2 px-6 rounded-full">Close</button>
                 </div>
