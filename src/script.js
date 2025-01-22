@@ -65,8 +65,8 @@ function createSkillBars(containerId, barCount, tooltipText) {
 
 // Menjalankan fungsi setelah DOM siap
 document.addEventListener("DOMContentLoaded", () => {
-    createSkillBars("skill-bars1", 1, "Expert");
-    createSkillBars("skill-bars-modal1", 1, "Expert");
+    createSkillBars("skill-bars", 5, "Expert");
+    createSkillBars("skill-bars-modal", 5, "Expert");
 
 });
 
