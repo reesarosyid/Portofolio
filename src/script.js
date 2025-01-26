@@ -15,67 +15,54 @@ function openModal(modalId) {
     }
 
 // Fungsi untuk menambahkan bar dengan warna sesuai jumlah
+// Fungsi untuk menambahkan bar dengan warna sesuai jumlah
 function createSkillBars(containerId, barCount, tooltipText) {
-    const container = document.getElementById(containerId);
+  const container = document.getElementById(containerId);
 
-    for (let i = 0; i < barCount; i++) {
-        const barWrapper = document.createElement("div");
-        barWrapper.classList.add("relative");
+  for (let i = 0; i < barCount; i++) {
+      const barWrapper = document.createElement("div");
+      barWrapper.classList.add("relative");
 
-        const bar = document.createElement("div");
-        bar.classList.add("w-6", "h-3", "rounded-full");
+      const bar = document.createElement("div");
+      bar.classList.add("w-6", "h-3", "rounded-full");
 
-        // Kondisi untuk menentukan warna
-        if (barCount === 5) {
-            bar.classList.add("bg-green-500");
-        } else if (barCount === 4) {
-            bar.classList.add("bg-lime-400");
-        } else if (barCount === 3) {
-            bar.classList.add("bg-yellow-200");
-        } else if (barCount === 2) {
-            bar.classList.add("bg-yellow-400");
-        } else if (barCount === 1) {
-            bar.classList.add("bg-orange-400");
-        }
+      // Kondisi untuk menentukan warna
+      if (barCount === 5) {
+          bar.classList.add("bg-green-500");
+      } else if (barCount === 4) {
+          bar.classList.add("bg-lime-400");
+      } else if (barCount === 3) {
+          bar.classList.add("bg-yellow-200");
+      } else if (barCount === 2) {
+          bar.classList.add("bg-yellow-400");
+      } else if (barCount === 1) {
+          bar.classList.add("bg-orange-400");
+      }
 
-        // Menambahkan tooltip pada bar terakhir
-        if (i === barCount - 1) {
-            const tooltip = document.createElement("div");
-            tooltip.classList.add(
-                "absolute",
-                "hidden",
-                "group-hover:block",
-                "bg-black",
-                "text-white",
-                "text-xs",
-                "rounded",
-                "py-1",
-                "px-2",
-                "top-6",
-                "-left-2"
-            );
-            tooltip.textContent = tooltipText;
-            barWrapper.appendChild(tooltip);
-        }
+      // Menambahkan tooltip pada bar terakhir
+      if (i === 0) {
+          const tooltip = document.createElement("div");
+          tooltip.classList.add(
+              "absolute",
+              "hidden",
+              "group-hover:block",
+              "bg-black",
+              "text-white",
+              "text-xs",
+              "rounded",
+              "py-1",
+              "px-2",
+              "top-6",
+              "-left-2"
+          );
+          tooltip.textContent = tooltipText;
+          barWrapper.appendChild(tooltip);
+      }
 
-        barWrapper.appendChild(bar);
-        container.appendChild(barWrapper);
-    }
+      barWrapper.appendChild(bar);
+      container.appendChild(barWrapper);
+  }
 }
-
-// Menjalankan fungsi setelah DOM siap
-document.addEventListener("DOMContentLoaded", () => {
-    createSkillBars("skill-bars", 5, "Expert");
-    createSkillBars("skill-bars-modal", 5, "Expert");
-
-});
-
-// Select container
-const containerEdu = document.getElementById('education-container');
-const containerExp = document.getElementById('experience-container');
-const containerPub = document.getElementById('publication-container');
-const containerCer = document.getElementById('certificate-container');
-const containerCerVa = document.getElementById('certificate-container-va');
 
 // Function to create and render an education item
 function renderEducationItem(container, item) {
@@ -209,7 +196,7 @@ function renderPublicationItem(container, item) {
     container.appendChild(publicationItem);
   }
 
-function renderCertificateItem(container, containerVa, item, index, totalItems) {
+function renderCertificateItem(container, containerVa, item, index) {
     // Create certificate item for main container (only if index < 3)
     if (index < 3) {
       const certificateItem = document.createElement('li');
@@ -303,7 +290,44 @@ function renderCertificateItem(container, containerVa, item, index, totalItems) 
     containerVa.appendChild(certificateItemVa);
 }
 
+
+function renderSkillItem(container, item, index) {
+  const skillItem = document.createElement("li");
+  skillItem.innerHTML = `
+    <div class="flex justify-between items-center mb-4">
+      <span class="text-base font-medium text-gray-900">${item.skill}</span>
+      <div id="skill-bar-${container.id}-${index}" class="flex space-x-1 group"></div>
+    </div>`;
+  container.appendChild(skillItem);
+  createSkillBars(`skill-bar-${container.id}-${index}`, item.bar, item.level);
+}
+
+// Select container
+const containerEdu = document.getElementById('education-container');
+const containerExp = document.getElementById('experience-container');
+const containerPub = document.getElementById('publication-container');
+const containerCer = document.getElementById('certificate-container');
+const containerCerVa = document.getElementById('certificate-container-va');
+const containerSkill = document.getElementById("skill-container");
+const containerSkillVa = document.getElementById("skill-container-va");
+
 // Fetch JSON data
+fetch('data/dataSkill.json')
+  .then(response => response.ok ? response.json() : Promise.reject(response))
+  .then(data => {
+    // Clear containers first
+    containerSkill.innerHTML = '';
+    containerSkillVa.innerHTML = '';
+    
+    // Top 5 skills
+    const top5 = [...data].sort((a, b) => b.level - a.level).slice(0, 10);
+    top5.forEach((item, index) => renderSkillItem(containerSkill, item, index));
+    
+    // All skills
+    data.forEach((item, index) => renderSkillItem(containerSkillVa, item, index));
+  })
+  .catch(error => console.error('Error:', error));
+
 fetch('data/dataEducation.json')
     .then(response => {
         if (!response.ok) {
@@ -348,19 +372,19 @@ fetch('data/dataPublication.json')
     })
     .catch(error => console.error('Error loading data:', error));
 
-    fetch('data/dataCertificate.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(data => {
-      data.forEach((item, index) => {
-        renderCertificateItem(containerCer, containerCerVa, item, index, data.length);
-      });
-    })
-    .catch(error => console.error('Error loading data:', error));
+fetch('data/dataCertificate.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    data.forEach((item, index) => {
+      renderCertificateItem(containerCer, containerCerVa, item, index);
+    });
+  })
+  .catch(error => console.error('Error loading data:', error));
 
 
 

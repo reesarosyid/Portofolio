@@ -1,0 +1,232 @@
+[{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa64"
+  },
+  "skill": "Problem Solving",
+  "bar": 4,
+  "level": "Advanced"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa65"
+  },
+  "skill": "Communication and Team Collaboration",
+  "bar": 4,
+  "level": "Advanced"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa66"
+  },
+  "skill": "Critical Thinking",
+  "bar": 4,
+  "level": "Advanced"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa67"
+  },
+  "skill": "Time Management",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa68"
+  },
+  "skill": "Data Analysis",
+  "bar": 4,
+  "level": "Advanced"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa69"
+  },
+  "skill": "Machine Learning",
+  "bar": 4,
+  "level": "Advanced"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa6a"
+  },
+  "skill": "Database",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa6b"
+  },
+  "skill": "Research Project",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa6c"
+  },
+  "skill": "Basic Quantum Computing",
+  "bar": 2,
+  "level": "Beginner"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa6d"
+  },
+  "skill": "Project Management",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa6e"
+  },
+  "skill": "Python",
+  "bar": 4,
+  "level": "Advanced"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa6f"
+  },
+  "skill": "SQL",
+  "bar": 4,
+  "level": "Advanced"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa70"
+  },
+  "skill": "NoSQL",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa71"
+  },
+  "skill": "Linux Script",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa72"
+  },
+  "skill": "HTML",
+  "bar": 4,
+  "level": "Advanced"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa73"
+  },
+  "skill": "CSS",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa74"
+  },
+  "skill": "JavaScript",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa75"
+  },
+  "skill": "Tensorflow",
+  "bar": 4,
+  "level": "Advanced"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa76"
+  },
+  "skill": "Qiskit",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa77"
+  },
+  "skill": "Sickit Learn",
+  "bar": 4,
+  "level": "Advanced"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa78"
+  },
+  "skill": "Streamlit",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa79"
+  },
+  "skill": "Visual Studio Code",
+  "bar": 4,
+  "level": "Advanced"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa7a"
+  },
+  "skill": "Docker",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa7b"
+  },
+  "skill": "Microsoft Office",
+  "bar": 4,
+  "level": "Advanced"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa7c"
+  },
+  "skill": "Github",
+  "bar": 4,
+  "level": "Advanced"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa7d"
+  },
+  "skill": "PowerBI",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa7e"
+  },
+  "skill": "Superset",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa7f"
+  },
+  "skill": "Airflow",
+  "bar": 3,
+  "level": "Intermediate"
+},
+{
+  "_id": {
+    "$oid": "6796653eb1044ceea3f8aa80"
+  },
+  "skill": "Kafka",
+  "bar": 2,
+  "level": "Beginner"
+}]
